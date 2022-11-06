@@ -5,10 +5,10 @@ def b_search(array, target, first, last):
         mid = (first + last) // 2
         # Check in the smaller side of the array
         if array[mid] < target:
-            b_search(array, target, first, mid)
+            start = mid + 1
             # Check in the bigger parts
         elif array[mid] > target:
-            b_search(array, target, mid + 1, last)
+            end = mid - 1
         else:
-            return 'found'
+            return mid
     return 'Not found'
